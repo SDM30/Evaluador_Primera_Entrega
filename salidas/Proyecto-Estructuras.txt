@@ -1,0 +1,37 @@
+========== CASO: prueba2.txt ==========
+>ayuda
+Lista de comandos disponibles:
+	cargar
+	listado
+	envolvente
+	descargar
+	guardar
+	salir
+	v_cercano
+	v_cercanos_caja
+	ruta_corta
+	ruta_corta_centro
+>cargar casos_prueba/fig_txt/cube.txt
+El objeto Cube cargado exitosamente desde el archivo casos_prueba/fig_txt/cube.txt
+>cargar casos_prueba/fig_txt/dodecahedron.txt
+El objeto Dodecahedron cargado exitosamente desde el archivo casos_prueba/fig_txt/dodecahedron.txt
+>listado
+Cube contiene 8 vertices, 18 aristas y 12 caras
+Dodecahedron contiene 20 vertices, 44 aristas y 14 caras
+
+========== CASO: prueba1.txt ==========
+>hola
+El comando hola no existe, para ver la lista de comandos use ayuda
+>ayuda
+Lista de comandos disponibles:
+	cargar
+	listado
+	envolvente
+	descargar
+	guardar
+	salir
+	v_cercano
+	v_cercanos_caja
+	ruta_corta
+	ruta_corta_centro
+

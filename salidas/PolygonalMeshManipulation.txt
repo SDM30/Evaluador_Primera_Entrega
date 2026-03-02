@@ -1,0 +1,28 @@
+========== CASO: prueba2.txt ==========
+>ayuda
+Elapsed time: 2.1985e-05s
+Processing finished at Mon Mar  2 01:13:56 2026
+>cargar casos_prueba/fig_txt/cube.txt
+El objeto Cube ha sido cargado exitosamente desde el archivo casos_prueba/fig_txt/cube.txt.
+Elapsed time: 0.000232903s
+Processing finished at Mon Mar  2 01:13:56 2026
+>cargar casos_prueba/fig_txt/dodecahedron.txt
+El objeto Dodecahedron ha sido cargado exitosamente desde el archivo casos_prueba/fig_txt/dodecahedron.txt.
+Elapsed time: 0.000514871s
+Processing finished at Mon Mar  2 01:13:56 2026
+>listado
+Hay 2 objetos en memoria:
+Cube contiene 8 vertices, 18 aristas y 12 caras.
+Dodecahedron contiene 20 vertices, 38 aristas y 14 caras.
+Elapsed time: 1.3608e-05s
+Processing finished at Mon Mar  2 01:13:56 2026
+
+========== CASO: prueba1.txt ==========
+>hola
+Comando no valido
+Elapsed time: 5.191e-06s
+Processing finished at Mon Mar  2 01:13:56 2026
+>ayuda
+Elapsed time: 2.2241e-05s
+Processing finished at Mon Mar  2 01:13:56 2026
+
