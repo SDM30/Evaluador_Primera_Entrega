@@ -1,0 +1,26 @@
+========== CASO: prueba_ejemplo1 ==========
+>cargar FigTxt/cube.txt
+El archivo FigTxt/cube.txt no existe o es ilegible
+>cargar FigTxt/dodecahedron.txt
+(sin salida)
+
+========== CASO: prueba_ejemplo2 ==========
+>ayuda
+Lista de comandos disponibles:
+	cargar
+	listado
+	envolvente
+	descargar
+	guardar
+	salir
+	v_cercano
+	v_cercanos_caja
+	ruta_corta
+	ruta_corta_centro
+>hola
+El comando hola no existe, para ver la lista de comandos use ayuda
+>hola
+El comando hola no existe, para ver la lista de comandos use ayuda
+>ayuda
+(sin salida)
+
