@@ -7,18 +7,13 @@ Este módulo compila y ejecuta múltiples proyectos C++ contra un conjunto de ca
 - Linux o entorno compatible con `python3` y `g++`
 - Python 3.10+
 
-Instalación de dependencias (si aplica en tu entorno):
-
-```bash
-pip install -r ../requerimientos.txt
-```
 
 ## Estructura esperada
 
-Dentro de `app/`:
+Dentro de `evaluador_primera_entrega/`:
 
 ```text
-app/
+evaluador_primera_entrega/
   main.py
   ensayador_proyecto.py
   proyectos/
@@ -44,13 +39,13 @@ Notas:
 Desde cualquier ruta:
 
 ```bash
-python3 evaluador_primera_entrega/app/main.py
+python3 evaluador_primera_entrega/main.py
 ```
 
 Con salida detallada (verbose):
 
 ```bash
-python3 evaluador_primera_entrega/app/main.py -v
+python3 evaluador_primera_entrega/main.py -v
 ```
 
 ## Salida de consola
@@ -74,7 +69,7 @@ Además del resumen, muestra:
 
 ## Formato de archivos de salida
 
-Se genera un archivo por proyecto en `app/salidas/<NombreProyecto>.txt`.
+Se genera un archivo por proyecto en `salidas/<NombreProyecto>.txt`.
 
 Cada archivo se divide por caso:
 
@@ -96,5 +91,5 @@ El símbolo `>` indica el comando leído desde el archivo de caso, y debajo apar
 
 ## Archivos principales
 
-- `app/main.py`: punto de entrada, parsea `-v` y dispara la ejecución.
-- `app/ensayador_proyecto.py`: descubrimiento de proyectos, compilación, ejecución de casos y generación de salidas.
+- `main.py`: punto de entrada, parsea `-v` y dispara la ejecución.
+- `ensayador_proyecto.py`: descubrimiento de proyectos, compilación, ejecución de casos y generación de salidas.
