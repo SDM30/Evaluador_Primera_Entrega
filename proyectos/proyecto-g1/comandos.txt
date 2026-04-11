@@ -1,0 +1,11 @@
+avanzar 40 cm
+girar 35 grd
+avanzar 35 cm
+perforar roca
+avanzar 26 kcm
+girar 25 grd
+fotografiar colinas 'sistema de montañas
+avanzar 0.75 mm
+composicion suelo 'polvo
+girar 30 grd
+avanzar 1.2 m

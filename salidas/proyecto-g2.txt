@@ -1,0 +1,94 @@
+========== CASO: comandos.txt ==========
+$ ayuda
+Comandos disponibles:
+cargar_comandos archivo
+cargar_elementos archivo
+agregar_movimiento tipo magnitud unidad
+agregar_analisis tipo objeto comentario
+agregar_elemento tipo tamaño unidad x y
+guardar tipo archivo
+simular_comandos x y
+salir
+$ ayuda cargar_comandos
+Comandos disponibles:
+cargar_comandos archivo
+cargar_elementos archivo
+agregar_movimiento tipo magnitud unidad
+agregar_analisis tipo objeto comentario
+agregar_elemento tipo tamaño unidad x y
+guardar tipo archivo
+simular_comandos x y
+salir
+$ ayuda agregar_movimiento
+Comandos disponibles:
+cargar_comandos archivo
+cargar_elementos archivo
+agregar_movimiento tipo magnitud unidad
+agregar_analisis tipo objeto comentario
+agregar_elemento tipo tamaño unidad x y
+guardar tipo archivo
+simular_comandos x y
+salir
+$ ayuda agregar_elemento
+Comandos disponibles:
+cargar_comandos archivo
+cargar_elementos archivo
+agregar_movimiento tipo magnitud unidad
+agregar_analisis tipo objeto comentario
+agregar_elemento tipo tamaño unidad x y
+guardar tipo archivo
+simular_comandos x y
+salir
+$ simular_comandos 0 0
+(No hay información) La información requerida no está almacenada en memoria.
+$ guardar comandos Recursos/salida_comandos.txt
+(No hay información) La información requerida no está almacenada en memoria.
+$ guardar elementos Recursos/salida_elementos.txt
+(No hay información) La información requerida no está almacenada en memoria.
+$ cargar_comandos Recursos/comandos_vacio.txt
+(Archivo vacío) Recursos/comandos_vacio.txt no contiene comandos.
+$ cargar_elementos Recursos/elementos_vacio.txt
+(Archivo vacío) Recursos/elementos_vacio.txt no contiene elementos.
+$ cargar_comandos archivo_inexistente.txt
+archivo_inexistente.txt no se encuentra o no puede leerse.
+$ cargar_elementos archivo_inexistente.txt
+archivo_inexistente.txt no se encuentra o no puede leerse.
+$ cargar_comandos Recursos/comandos_base.txt
+8 comandos cargados correctamente desde Recursos/comandos_base.txt
+$ cargar_elementos Recursos/elementos_base.txt
+4 elementos cargados correctamente desde Recursos/elementos_base.txt
+$ agregar_movimiento avanzar 25 cm
+El comando de movimiento ha sido agregado exitosamente.
+$ agregar_movimiento girar 1.5708 rad
+El comando de movimiento ha sido agregado exitosamente.
+$ agregar_analisis fotografiar crater 'borde norte'
+El comando de análisis ha sido agregado exitosamente.
+$ agregar_analisis composicion suelo 'zona oscura'
+El comando de análisis ha sido agregado exitosamente.
+$ agregar_elemento roca 30 cm 4 4
+El elemento ha sido agregado exitosamente.
+$ agregar_movimiento saltar 10 m
+(Formato erróneo) La información del movimiento no corresponde a los datos esperados
+$ agregar_movimiento avanzar diez cm
+(Error) Falta informacion o formato incorrecto. Uso: agregar_movimiento <tipo> <magnitud> <unidad>
+$ agregar_analisis mirar roca
+(Formato erróneo) La información del análisis no corresponde a los datos esperados
+$ agregar_elemento piedra 10 cm 1 1
+(Formato erróneo) La información del elemento no corresponde a los datos esperados
+$ agregar_elemento roca diez cm 1 1
+(Error) Falta informacion o formato incorrecto. Uso: agregar_elemento <tipo> <tamaño> <unidad> <x> <y>
+$ guardar comandos salida_comandos.txt
+(Escritura exitosa) La información ha sido guardada en salida_comandos.txt
+$ guardar elementos salida_elementos.txt
+(Escritura exitosa) La información ha sido guardada en salida_elementos.txt
+$ simular_comandos 0 0
+La simulación de los comandos deja al robot en (85,2)
+$ simular_comandos -5.5 3.2
+La simulación de los comandos deja al robot en (79.5,5.2)
+$ cargar_comandos Recursos/comandos_erroneos.txt
+5 comandos cargados correctamente desde Recursos/comandos_erroneos.txt
+$ cargar_elementos Recursos/elementos_erroneos.txt
+1 elementos cargados correctamente desde Recursos/elementos_erroneos.txt
+$ salir
+(sin salida)
+

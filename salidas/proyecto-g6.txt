@@ -1,0 +1,115 @@
+========== CASO: comandos.txt ==========
+$ ayuda
+Para este programa, los comandos permitidos son:
+
+ayuda
+ayuda --comando del que se requiere informacion--.
+cargar_comandos
+cargar_elementos
+agregar_movimiento
+agregar_analisis
+agregar_elemento
+guardar
+simular_comandos
+salir
+ubicar_elementos
+en_cuadrante
+crear_mapa
+ruta_mas_larga
+$ ayuda cargar_comandos
+Este comando cuenta con 1 paramentro y su estructura es la siguiente:
+
+cargar_comandos nombre_archivo
+
+Especificaciones de su parametro:
+- nombre_archivo: corresponde al nombre de algun archivo existente, con su extension, en la carpeta empleada.
+$ ayuda agregar_movimiento
+Este comando cuenta con 3 paramentros y su estructura es la siguiente:
+
+agregar_movimiento tipo_mov magnitud unidad_med
+
+Especificaciones de sus parametros:
+
+- tipo_mov: corresponde al tipo de movimiento a efectuar. Puede ser avanzar o girar.
+- magnitud: corresponde a la cuantificacion del desplazamiento. Se reciben valores decimales y negativos. Dado que el curiosity se encuentra 
+  posicionado, de forma predeterminada, hacia la derecha del eje X de un plano cartesiano, los valores negativos, si se trata de un avance, 
+  corresponden a movimientos hacia el contrario de su orientacion (hacia la izquierda del eje X si no se ha girado el vehiculo aun); si se 
+  trata de un giro, los negativos producen movimiento a favor de las manecillas del reloj. Los positivos propician desplazamientos contrarios.
+- unidad_med: corresponde a la unidad en que se mide el desplazamiento. Para el caso de avanzar, las escalas permitidas son: cm, dm, m o km. 
+  Por otra parte, si se trata de un giro, unicamente se reciben las unidades grd o rad.
+$ ayuda agregar_elemento
+Este comando cuenta con 5 paramentros, y su estructura es la siguiente:
+
+agregar_elemento tipo_comp tamano unidad_med coordX coordY
+
+Especificaciones de sus parametros:
+
+- tipo_comp: determina el tipo de componente o elemento que se busca agregar. Puede ser de 4 tipos: roca, crater, monticulo o duna.
+- tamano: corresponde a un valor real que establece que tan grande es el elemento en cuestion. Se aceptan decimales, pero no es 
+  posible introducir valores negativos.
+- unidad_med: representa la unidad en que se tasa el tamano del componente. Las escalas permitidas son: cm, dm, m y km.
+- coordX: es la coordenada en el eje X que define la ubicacion del elemento en el plano cartesiano del suelo marciano utilizado 
+  por el vehiculo.
+- coordX: es la coordenada en el eje Y que define la ubicacion del elemento en el plano cartesiano del suelo marciano utilizado 
+  por el vehiculo.
+$ simular_comandos 0 0
+No se han almacenado comandos de desplazamiento para simular.
+$ guardar comandos Recursos/salida_comandos.txt
+No existe informacion de comandos almacenada en memoria.
+$ guardar elementos Recursos/salida_elementos.txt
+No existe informacion de elementos almacenada en memoria.
+$ cargar_comandos Recursos/comandos_vacio.txt
+Recursos/comandos_vacio.txt no contiene comandos
+$ cargar_elementos Recursos/elementos_vacio.txt
+Recursos/elementos_vacio.txt no contiene comandos
+$ cargar_comandos archivo_inexistente.txt
+El archivo archivo_inexistente.txt no se encuentra o no puede leerse
+$ cargar_elementos archivo_inexistente.txt
+El archivo archivo_inexistente.txt no se encuentra o no puede leerse
+$ cargar_comandos Recursos/comandos_base.txt
+Recursos/comandos_base.txt listo para procesarse...
+
+Se cargaron 8 comandos adecuadamente desde el archivo Recursos/comandos_base.txt.
+$ cargar_elementos Recursos/elementos_base.txt
+Recursos/elementos_base.txt listo para procesarse...
+
+Se cargaron 4 elementos adecuadamente desde el archivo Recursos/elementos_base.txt.
+$ agregar_movimiento avanzar 25 cm
+El comando de movimiento ha sido agregado satisfactoriamente.
+$ agregar_movimiento girar 1.5708 rad
+El comando de movimiento ha sido agregado satisfactoriamente.
+$ agregar_analisis fotografiar crater 'borde norte'
+El comando de analisis (con comentario) ha sido agregado satisfactoriamente.
+$ agregar_analisis composicion suelo 'zona oscura'
+El comando de analisis (con comentario) ha sido agregado satisfactoriamente.
+$ agregar_elemento roca 30 cm 4 4
+El elemento ha sido agregado satisfactoriamente.
+$ agregar_movimiento saltar 10 m
+El movimiento ingresado (parametro 1) no es valido. Para mas informacion sobre la estructura de este comando, revisar --ayuda agregar_movimiento--.
+$ agregar_movimiento avanzar diez cm
+La magnitud del movimiento ingresado (parametro 2) no es numerica. Para mas informacion sobre la estructura de este comando, revisar --ayuda agregar_movimiento--.
+$ agregar_analisis mirar roca
+El tipo de analisis ingresado (parametro 1) no es valido. Para mas informacion sobre la estructura de este comando, revisar --ayuda agregar_analisis--.
+$ agregar_elemento piedra 10 cm 1 1
+El tipo de componente ingresado (parametro 1) no es valido. Para mas informacion sobre la estructura de este comando, revisar --ayuda agregar_elemento--.
+$ agregar_elemento roca diez cm 1 1
+La magnitud del movimiento ingresado (parametro 2) no es numerica. Para mas informacion sobre la estructura de este comando, revisar --ayuda agregar_elemento--.
+$ guardar comandos salida_comandos.txt
+Comandos cargados en salida_comandos.txt correctamente.
+$ guardar elementos salida_elementos.txt
+Elementos cargados en salida_elementos.txt correctamente.
+$ simular_comandos 0 0
+La simulacion de los comandos de desplazamiento almacenados, partiendo de una posicion (0, 0), ubica al Curiosity, finalmente, en el punto (0.85, 2) del plano de coordenadas del planeta Marte.
+$ simular_comandos -5.5 3.2
+La simulacion de los comandos de desplazamiento almacenados, partiendo de una posicion (-5.5, 3.2), ubica al Curiosity, finalmente, en el punto (-4.65, 5.2) del plano de coordenadas del planeta Marte.
+$ cargar_comandos Recursos/comandos_erroneos.txt
+Recursos/comandos_erroneos.txt listo para procesarse...
+
+Se cargaron 1 comandos adecuadamente desde el archivo Recursos/comandos_erroneos.txt.
+$ cargar_elementos Recursos/elementos_erroneos.txt
+Recursos/elementos_erroneos.txt listo para procesarse...
+
+Se cargaron 0 elementos adecuadamente desde el archivo Recursos/elementos_erroneos.txt.
+$ salir
+Presione cualquier tecla para finalizar...
+

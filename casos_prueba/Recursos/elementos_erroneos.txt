@@ -1,0 +1,4 @@
+piedra 10 cm 1 1
+roca diez cm 1 1
+crater 5 pulgadas 2 3
+duna 3 m x y

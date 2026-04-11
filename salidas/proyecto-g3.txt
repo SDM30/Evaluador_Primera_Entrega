@@ -1,0 +1,107 @@
+========== CASO: comandos.txt ==========
+$ ayuda
+Sistema Curiosity - Entrega 0. Escriba 'ayuda' para iniciar.
+Comandos disponibles:
+
+--- COMPONENTE 1: GESTION BASICA ---
+
+ - cargar_comandos
+ - cargar_elementos
+ - agregar_movimiento
+ - agregar_analisis
+ - agregar_elemento
+ - guardar
+ - simular_comandos
+ - salir
+
+--- COMPONENTE 2: PLANEACION DE DESPLAZAMIENTOS ---
+
+ - ubicar_elementos
+ - en_cuadrante
+
+--- COMPONENTE 3: RECORRIDOS Y MAPAS ---
+
+ - crear_mapa
+ - ruta_mas_larga
+
+Escriba 'ayuda [comando]' para ver tipos de dato y parametros.
+$ ayuda cargar_comandos
+Uso: cargar_comandos <nombre_archivo: string>
+Desc: Carga instrucciones desde un archivo de texto.
+$ ayuda agregar_movimiento
+Uso: agregar_movimiento <tipo_mov: string (avanzar|girar)> <magnitud: numerico> <unidad: string (cm|m|km|grd|rad)>
+$ ayuda agregar_elemento
+Uso: agregar_elemento <tipo: string (roca|crater|monticulo|duna)> <tamanio: numerico> <unidad: string (cm|m|km)> <x: numerico> <y: numerico>
+$ simular_comandos 0 0
+(No hay información) La información requerida no está almacenada en memoria.
+$ guardar comandos Recursos/salida_comandos.txt
+(No hay información) La información requerida no está almacenada en memoria.
+$ guardar elementos Recursos/salida_elementos.txt
+(No hay información) La información requerida no está almacenada en memoria.
+$ cargar_comandos Recursos/comandos_vacio.txt
+(Archivo vacío) Recursos/comandos_vacio.txt no contiene comandos
+$ cargar_elementos Recursos/elementos_vacio.txt
+(Archivo vacío) Recursos/elementos_vacio.txt no contiene comandos
+$ cargar_comandos archivo_inexistente.txt
+(Archivo erroeno) archivo_inexistente.txt no se encuentra o no puede leerse
+$ cargar_elementos archivo_inexistente.txt
+(Archivo erroeno) archivo_inexistente.txt no se encuentra o no puede leerse
+$ cargar_comandos Recursos/comandos_base.txt
+avanzar 10 cm
+girar 90 grd
+avanzar 2 m
+fotografiar roca frente del rover
+perforar suelo 
+composicion arena muestra fina
+girar -90 grd
+avanzar 50 cm
+(Resultado exitoso) 8 Comandos cargados correctamente desde Recursos/comandos_base.txt
+$ cargar_elementos Recursos/elementos_base.txt
+roca 20 cm 1 1
+crater 1 m 3 2
+monticulo 50 cm 2 4
+duna 2 m 5 1
+(Resultado exitoso) 4 Elementos cargados correctamente desde Recursos/elementos_base.txt
+$ agregar_movimiento avanzar 25 cm
+(Resultado exitoso) El comando de movimiento ha sido agregado exitosamente.
+$ agregar_movimiento girar 1.5708 rad
+(Resultado exitoso) El comando de movimiento ha sido agregado exitosamente.
+$ agregar_analisis fotografiar crater 'borde norte'
+(Resultado exitoso) El comando de analisis ha sido agregado exitosamente.
+$ agregar_analisis composicion suelo 'zona oscura'
+(Resultado exitoso) El comando de analisis ha sido agregado exitosamente.
+$ agregar_elemento roca 30 cm 4 4
+(Resultado exitoso) El elemento ha sido agregado exitosamente.
+$ agregar_movimiento saltar 10 m
+Error: Tipo movimiento invalido
+$ agregar_movimiento avanzar diez cm
+(Error) Debe ingresar un numero en el campo magnitud.
+$ agregar_analisis mirar roca
+Error: Tipo analisis invalido
+$ agregar_elemento piedra 10 cm 1 1
+Error: Tipo Elemento invalido
+$ agregar_elemento roca diez cm 1 1
+(Formato erroneo) Datos de elemento invalidos.
+$ guardar comandos salida_comandos.txt
+(Escritura exitosa) Informacion guardada en salida_comandos.txt
+$ guardar elementos salida_elementos.txt
+(Escritura exitosa) Informacion guardada en salida_elementos.txt
+$ simular_comandos 0 0
+(Resultado exitoso) La simulación de los comandos, a partir de la posición (0,0), deja al robot en la nueva posición (0.85000,2.00000).
+$ simular_comandos -5.5 3.2
+(Resultado exitoso) La simulación de los comandos, a partir de la posición (-5.5,3.2), deja al robot en la nueva posición (-4.15000,5.00000).
+$ cargar_comandos Recursos/comandos_erroneos.txt
+Error: la magnitud debe ser un numero real valido
+Error: Debe ingresar una unidad de medida correcta
+Error: Faltan parámetros para comando de análisis
+Error: Comentario invalido (debe ir entre comillas simples)
+(Resultado exitoso) 1 Comandos cargados correctamente desde Recursos/comandos_erroneos.txt
+$ cargar_elementos Recursos/elementos_erroneos.txt
+Error: Tipo Elemento invalido
+Error: El tamaño debe ser un numero real valido
+Error: Debe ingresar una unidad de medida correcta
+Error: Las coordenadas deben ser numeros reales validos
+(Resultado exitoso) 0 Elementos cargados correctamente desde Recursos/elementos_erroneos.txt
+$ salir
+(sin salida)
+

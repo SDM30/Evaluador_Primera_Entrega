@@ -1,0 +1,30 @@
+ayuda
+ayuda cargar_comandos
+ayuda agregar_movimiento
+ayuda agregar_elemento
+simular_comandos 0 0
+guardar comandos Recursos/salida_comandos.txt
+guardar elementos Recursos/salida_elementos.txt
+cargar_comandos Recursos/comandos_vacio.txt
+cargar_elementos Recursos/elementos_vacio.txt
+cargar_comandos archivo_inexistente.txt
+cargar_elementos archivo_inexistente.txt
+cargar_comandos Recursos/comandos_base.txt
+cargar_elementos Recursos/elementos_base.txt
+agregar_movimiento avanzar 25 cm
+agregar_movimiento girar 1.5708 rad
+agregar_analisis fotografiar crater 'borde norte'
+agregar_analisis composicion suelo 'zona oscura'
+agregar_elemento roca 30 cm 4 4
+agregar_movimiento saltar 10 m
+agregar_movimiento avanzar diez cm
+agregar_analisis mirar roca
+agregar_elemento piedra 10 cm 1 1
+agregar_elemento roca diez cm 1 1
+guardar comandos salida_comandos.txt
+guardar elementos salida_elementos.txt
+simular_comandos 0 0
+simular_comandos -5.5 3.2
+cargar_comandos Recursos/comandos_erroneos.txt
+cargar_elementos Recursos/elementos_erroneos.txt
+salir

@@ -1,0 +1,8 @@
+avanzar 10 cm
+girar 90 grd
+avanzar 2 m
+fotografiar roca 'frente del rover'
+perforar suelo
+composicion arena 'muestra fina'
+girar -90 grd
+avanzar 50 cm

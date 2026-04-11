@@ -1,0 +1,12 @@
+avanzar 10 cm
+girar 90 grd
+avanzar 2 m
+fotografiar roca 'frente del rover'
+perforar suelo
+composicion arena 'muestra fina'
+girar -90 grd
+avanzar 50 cm
+avanzar 25 cm
+girar 1.5708 rad
+fotografiar crater 'borde norte'
+composicion suelo 'zona oscura'

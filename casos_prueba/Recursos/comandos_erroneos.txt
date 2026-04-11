@@ -1,0 +1,5 @@
+avanzar diez cm
+girar 90 grados
+volar 5 m
+fotografiar
+perforar roca comentario_sin_comillas

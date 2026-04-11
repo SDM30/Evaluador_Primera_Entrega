@@ -1,0 +1,99 @@
+========== CASO: comandos.txt ==========
+$ ayuda
+Sistema Curiosity grupo 5
+Escriba 'ayuda' para ver los comandos disponibles.
+Comandos disponibles:
+  cargar_comandos <nombre_archivo>
+  cargar_elementos <nombre_archivo>
+  agregar_movimiento <avanzar|girar> <magnitud> <unidad>
+  agregar_analisis <fotografiar|composicion|perforar> <objeto> ['comentario']
+  agregar_elemento <roca|crater|monticulo|duna> <tamano> <unidad> <x> <y>
+  guardar <comandos|elementos> <nombre_archivo>
+  simular_comandos <coordX> <coordY>
+  ubicar_elementos
+  en_cuadrante <xMin> <xMax> <yMin> <yMax>
+  crear_mapa <coeficiente>
+  ruta_mas_larga
+  ayuda [comando]
+  salir
+Use 'ayuda <comando>' para ver la descripcion de un comando especifico
+$ ayuda cargar_comandos
+cargar_comandos nombre_archivo
+Carga en memoria los comandos de desplazamiento contenidos en el archivo identificado
+por nombre_archivo, es decir, utiliza adecuadamente las estructuras lineales para cargar la
+informacion de los comandos en memoria. Si dentro de la misma sesion de trabajo ya se han
+cargado otros archivos de comandos (usando el comando cargar_comandos), la informacion debe
+sobreescribirse en memoria, es decir, no se deben combinar informaciones de comandos de
+diferentes archivos
+$ ayuda agregar_movimiento
+agregar_movimiento tipo_mov magnitud unidad_med
+Agrega el comando de movimiento descrito a la lista de comandos del robot Curiosity.
+El movimiento puede ser de dos tipos: avanzar o girar. La magnitud corresponde al valor
+del movimiento; si es avanzar, el numero de unidades que se espera avanzar, si es girar
+la cantidad de grados que debe girar. La unidad de medida corresponde a la convencion
+con la que se mide la magnitud del movimiento. Si no se envia la informacion completa y
+adecuada del comando de movimiento, este no puede agregarse a la lista de los comandos
+que se enviaran al robot desde la tierra
+$ ayuda agregar_elemento
+agregar_elemento tipo_comp tamano unidad_med coordX coordY
+Agrega el componente o elemento descrito a la lista de puntos de interes del robot
+Curiosity. El tipo de componente puede ser uno entre roca, crater, monticulo o duna.
+El tamano es un valor real que da cuenta de que tan grande es el elemento; y la unidad
+de medida complementa este valor con la convencion que se uso para su medicion.
+Las coordenadas x y y corresponden a numeros reales que permiten conocer la ubicacion
+del elemento en el sistema de coordenadas del suelo marciano. Si no se envia la
+informacion completa y adecuada del elemento, este no puede agregarse a la lista de
+puntos de interes que se enviaran al robot desde la tierra
+$ simular_comandos 0 0
+(No hay informacion) La informacion requerida no esta almacenada en memoria
+$ guardar comandos Recursos/salida_comandos.txt
+(No hay informacion) La informacion requerida no esta almacenada en memoria
+$ guardar elementos Recursos/salida_elementos.txt
+(No hay informacion) La informacion requerida no esta almacenada en memoria
+$ cargar_comandos Recursos/comandos_vacio.txt
+(Archivo vacio) Recursos/comandos_vacio.txt no contiene comandos
+$ cargar_elementos Recursos/elementos_vacio.txt
+(Archivo vacio) Recursos/elementos_vacio.txt no contiene elementos
+$ cargar_comandos archivo_inexistente.txt
+(Archivo erroneo) archivo_inexistente.txt no se encuentra o no puede leerse
+$ cargar_elementos archivo_inexistente.txt
+(Archivo erroneo) archivo_inexistente.txt no se encuentra o no puede leerse
+$ cargar_comandos Recursos/comandos_base.txt
+(Resultado exitoso) 8 comandos cargados correctamente desde Recursos/comandos_base.txt
+$ cargar_elementos Recursos/elementos_base.txt
+(Resultado exitoso) 4 elementos cargados correctamente desde Recursos/elementos_base.txt
+$ agregar_movimiento avanzar 25 cm
+(Resultado exitoso) El comando de movimiento ha sido agregado exitosamente
+$ agregar_movimiento girar 1.5708 rad
+(Resultado exitoso) El comando de movimiento ha sido agregado exitosamente
+$ agregar_analisis fotografiar crater 'borde norte'
+(Resultado exitoso) El comando de analisis ha sido agregado exitosamente
+$ agregar_analisis composicion suelo 'zona oscura'
+(Resultado exitoso) El comando de analisis ha sido agregado exitosamente
+$ agregar_elemento roca 30 cm 4 4
+(Resultado exitoso) El elemento ha sido agregado exitosamente
+$ agregar_movimiento saltar 10 m
+(Formato erroneo) La informacion del movimiento no corresponde a los datos esperados (tipo, magnitud, unidad)
+$ agregar_movimiento avanzar diez cm
+(Formato erroneo) La informacion del movimiento no corresponde a los datos esperados (tipo, magnitud, unidad)
+$ agregar_analisis mirar roca
+(Formato erroneo) La informacion del analisis no corresponde a los datos esperados (tipo, objeto, comentario)
+$ agregar_elemento piedra 10 cm 1 1
+(Formato erroneo) La informacion del elemento no corresponde a los datos esperados (tipo, tamano, unidad, x, y)
+$ agregar_elemento roca diez cm 1 1
+(Formato erroneo) La informacion del elemento no corresponde a los datos esperados (tipo, tamano, unidad, x, y)
+$ guardar comandos salida_comandos.txt
+(Escritura exitosa) La informacion ha sido guardada en salida_comandos.txt
+$ guardar elementos salida_elementos.txt
+(Escritura exitosa) La informacion ha sido guardada en salida_elementos.txt
+$ simular_comandos 0 0
+(Resultado exitoso) La simulacion de los comandos, a partir de la posicion (0,0), deja al robot en la nueva posicion (0.85,2).
+$ simular_comandos -5.5 3.2
+(Resultado exitoso) La simulacion de los comandos, a partir de la posicion (-5.5,3.2), deja al robot en la nueva posicion (-4.65,5.2).
+$ cargar_comandos Recursos/comandos_erroneos.txt
+(Archivo vacio) Recursos/comandos_erroneos.txt no contiene comandos
+$ cargar_elementos Recursos/elementos_erroneos.txt
+(Archivo vacio) Recursos/elementos_erroneos.txt no contiene elementos
+$ salir
+(sin salida)
+
